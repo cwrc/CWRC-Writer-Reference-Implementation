@@ -16,5 +16,5 @@ The CWRC-Writer has been designed to interact with these services through one of
 
 Herein we define both APIs and provide a reference implementation for both APIs.  The reference implementation is intended for evaluation of the CWRC-Writer and not for production use.
 
-In a separate project we provide alternate 'delegators', that can be used to ease the work of tieing the CWRC-Writer to other backend providers.
+In a separate project we provide alternate 'delegators' and associated server-side API stubs, that can be used to ease the work of linking the CWRC-Writer to other backend providers.
 
