@@ -1,6 +1,10 @@
 # CWRC-Writer-Reference-Implementation
 
-CWRC-Writer (https://github.com/cwrc/CWRC-Writer) is a a JQuery customization of the TinyMCE editor for in-browser XML editing and stand-off RDF annotation. The CWRC-Writer is meant to be embedded within other pages, interacting with outside services including:
+CWRC-Writer (https://github.com/cwrc/CWRC-Writer) is a a JQuery customization of the TinyMCE editor for in-browser XML editing and stand-off RDF annotation.
+
+![Alt Text](https://raw.githubusercontent.com/cwrc/CWRC-Writer-Reference-Implementation/master/docs/images/editor.png)
+
+The CWRC-Writer is meant to be embedded within other pages, interacting with outside services including:
 
  - a document store
  - an annotation store
