@@ -11,7 +11,7 @@ Either standalone or embedded, CWRC-Writer interacts with outside services inclu
  - a document store ( to list, create, retrieve, edit, delete documents)
  - an annotation store ( to store and retrieve standoff annotations for specific documents)
  - an XML validation service
- - an entity lookup and authoring service (to 
+ - an entity lookup and authoring service (to lookup linked data URIs for people, place, and organizations and to create new URIs for new entities)
  - an XML schema or schemas
  - and XML template store
 
@@ -20,13 +20,13 @@ The CWRC-Writer interacts with the outside services by delegating calls (to list
 - 'Delegator' -- client-side (in the browser javascript)
 - RESTful -- server-side
 
-For example, if the use clicks the button within the editor to list documents available for edit, a call is made via the delegator to the server side RESTful API:
+For example, if the user clicks the button within the editor to list documents available for edit, a call is made via the delegator to the server side RESTful API:
 
 ![Alt Text](https://raw.githubusercontent.com/cwrc/CWRC-Writer-Reference-Implementation/master/docs/images/delegation.png)
 
-A project adopting CWRC-Writer might, therefore, chose to implement a server-side API that works with the default delegator, or they may chose to implement their own delegator that can call to any service with any server side API, and then simply tranform the result within the delegator before passing it back to the CWRC-Writer.  We anticipate that most projects will want to implement their own delegators as they'll likely already have their own document store with it's own API.
+A project adopting CWRC-Writer might, therefore, chose to implement a server-side API that works with the default delegator, or they may chose to implement their own delegator that can call to any service with any server side API, and then simply tranform the result within the delegator before passing it back to the CWRC-Writer.  We anticipate that most projects will implement their own delegators as they'll likely already have their own document store with it's own API.
 
-If the CWRC-Writer is embedded within another page, the surrounding page may take care of some things like listing documents, retrieving documents, or even saving documents, in which case the surrounding page will simply pass documents to and from the CWRC-Writer for edit.  The CWRC-Writer will still need to instigate calls to other services like the annotation store, validation service, etc., but will call those services through a delegator.  
+If the CWRC-Writer is embedded within another page, the surrounding page may take care of some things like listing documents, retrieving documents, or even saving documents, in which case the surrounding page will simply pass documents to and from the CWRC-Writer for edit.  In other words, the user would no longer click the 'documents' button within the editor, but instead browse a list of documents in some list that sits outside the editor, choosing a document from that list, which is then passed into the editor by the surrounding code.  The CWRC-Writer will still instigate calls to some of the other services like the annotation store, validation service, etc., but will continue to call those services through a delegator.  
 
 Herein we define both APIs and provide a reference implementation for both APIs.  The reference implementation is intended for evaluation of the CWRC-Writer and not for production use.
 
