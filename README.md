@@ -28,7 +28,9 @@ A project adopting CWRC-Writer might, therefore, chose to implement a server-sid
 
 If the CWRC-Writer is embedded within another page, the surrounding page may take care of some things like listing documents, retrieving documents, or even saving documents, in which case the surrounding page will simply pass documents to and from the CWRC-Writer for edit.  In other words, the user would no longer click the 'documents' button within the editor, but instead browse a list of documents in some list that sits outside the editor, choosing a document from that list, which is then passed into the editor by the surrounding code.  The CWRC-Writer will still instigate calls to some of the other services like the annotation store, validation service, etc., but will continue to call those services through a delegator.  
 
-Herein we define both APIs and provide a reference implementation for both APIs.  The reference implementation is intended for evaluation of the CWRC-Writer and not for production use.
+Herein we define both APIs and provide a reference implementation for both APIs, including the full suite of server side services.  The reference implementation is intended for evaluation of the CWRC-Writer and not for production use.
 
-In a separate project we provide alternate 'delegators' and associated server-side API stubs, that can be used to ease the work of linking the CWRC-Writer to other backend providers.
+We intend to provide a Docker instance for ease of use.
+
+In a separate project we provide alternate 'delegators' and associated server-side API stubs, developed together with partner projects, that can be used to ease the work of linking the CWRC-Writer to other backend services.
 
